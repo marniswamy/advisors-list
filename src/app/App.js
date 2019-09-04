@@ -1,12 +1,14 @@
 import React from 'react';
-import './App.css';
+import { Provider } from 'react-redux';
+import store from '../store/store';
+import { AdvisorsListPage } from '../pages/AdvisorsListPage/AdvisorsListPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      Marni
-    </div>
+    <Provider store={store}>
+      <AdvisorsListPage />
+    </Provider>
   );
-}
+};
 
 export default App;

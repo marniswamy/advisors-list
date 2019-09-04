@@ -1,0 +1,1 @@
+export { getFakeDataHelper } from './getFakeDataHelper';
