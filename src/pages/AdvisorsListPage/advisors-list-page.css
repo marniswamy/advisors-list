@@ -1,0 +1,14 @@
+.sort-filter-menu {
+    min-height: 60px;
+    position: fixed;
+    width: 100%;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.advisor-list-container {
+    margin-top: 64px;
+    padding-top: 72px;
+}

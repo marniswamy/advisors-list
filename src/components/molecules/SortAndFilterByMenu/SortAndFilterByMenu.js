@@ -1,18 +1,16 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
+import { SortByContainer } from '../../../containers/atoms/SortByContainer';
+import { FilterByContainer } from '../../../containers/atoms/FilterByContainer';
 
 /**
- * A description explaining what we use this component for
+ * SortAndFilterByMenu component holds the sort and filter componets for the
+ * advisors list
  *
- * @param {*} props - a descriptions of what props is
  * @returns {*} a React Stateless Functional Component
  */
-export const SortAndFilterByMenu = props => (
+export const SortAndFilterByMenu = () => (
   <div className="sort-filter-menu">
-    SortAndFilterByMenu
+    <SortByContainer />
+    <FilterByContainer />
   </div>
 );
-
-SortAndFilterByMenu.propTypes = {};
-
-SortAndFilterByMenu.defaultProps = {};
