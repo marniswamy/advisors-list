@@ -4,5 +4,7 @@ import { getFakeDataHelper } from "../helpers/getFakeDataHelper/getFakeDataHelpe
  * Initial state for the application
  */
 export const INITIAL_STATE = {
-    advisorsList: getFakeDataHelper()
+    advisorsList: getFakeDataHelper(),
+    filterBy: '',
+    sortBy: ''
 }

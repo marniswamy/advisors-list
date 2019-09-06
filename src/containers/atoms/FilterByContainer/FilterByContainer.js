@@ -1,9 +1,18 @@
 import { connect } from 'react-redux';
 import { FilterBy } from '../../../components/atoms/FilterBy';
+import { filterByAction } from '../../../actions/filterByAction';
 
-export const mapStateToProps = (state, ownProps) => ({});
+export const mapStateToProps = (state) => ({
+  value: state.filterBy
+});
 
-export const mapDispatchToProps = (dispatch, ownProps) => ({});
+export const mapDispatchToProps = (dispatch) => ({
+  handleChange: (event) => {
+    dispatch(
+      filterByAction(event.target.value)
+    )
+  }
+});
 
 export const FilterByContainer = connect(
   mapStateToProps,
