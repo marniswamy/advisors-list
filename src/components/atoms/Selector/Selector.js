@@ -65,13 +65,11 @@ export const Selector = ({
 Selector.propTypes = {
   label: PropTypes.string,
   option: PropTypes.array,
-  value: PropTypes.string,
   handleChange: PropTypes.func
 };
 
 Selector.defaultProps = {
   label: '',
   options: [],
-  value: '',
   handleChange: () => null
 };

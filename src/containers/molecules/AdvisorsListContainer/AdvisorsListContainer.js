@@ -1,13 +1,12 @@
 import { connect } from 'react-redux';
 import { AdvisorsList } from '../../../components/molecules/AdvisorsList';
+import { filteredAdvisorListSelector } from '../../../selectors/filteredAdvisorListSelector';
 
-export const mapStateToProps = (state, ownProps) => ({
-  advisors: state.advisorsList
+export const mapStateToProps = state => ({
+  advisors: filteredAdvisorListSelector(state)
 });
-
-export const mapDispatchToProps = (dispatch, ownProps) => ({});
 
 export const AdvisorsListContainer = connect(
   mapStateToProps,
-  mapDispatchToProps,
+  null,
 )(AdvisorsList);

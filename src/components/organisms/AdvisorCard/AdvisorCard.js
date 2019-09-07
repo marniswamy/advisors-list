@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
   cover: {
     width: 185,
-    minWidth: 170
+    minWidth: 185
   }
 }));
 
