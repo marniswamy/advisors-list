@@ -10,9 +10,9 @@ import { get } from 'lodash';
 export const getLanguageOptions = state => {
   const advisorsList = get(state, 'advisorsList', []);
   const locales = advisorsList.map(advisor => advisor.language);
-  return [...new Set(locales)].map((locale, index) => ({
+  return [...new Set(locales)].map((locale) => ({
     label: locale,
-    value: index
+    value: locale
   })
   );
 }

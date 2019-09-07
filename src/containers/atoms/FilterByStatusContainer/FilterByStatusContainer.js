@@ -26,11 +26,11 @@ FilterByStatusContainer.defaultProps = {
   options: [
     {
       label: 'Active',
-      value: 0
+      value: 'Active'
     },
     {
       label: 'Inactive',
-      value: 1
+      value: 'Inactive'
     }
   ]
 }

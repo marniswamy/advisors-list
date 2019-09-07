@@ -6,7 +6,10 @@
     "@material-ui/core": "^4.4.0",
     "@material-ui/icons": "^4.2.1",
     "@material-ui/lab": "^4.0.0-alpha.25",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "faker": "^4.1.0",
+    "node-env-run": "^3.0.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
@@ -20,8 +23,33 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node-env-run server --exec nodemon"
   },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^24.8.0",
+    "babel-preset-es2015": "^6.24.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "24.7.1",
+    "nodemon": "^1.12.1",
+    "redux-logger": "^3.0.6"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>setup/setupEnzyme.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/setup/"
+    ],
+    "unmockedModulePathPatterns": [
+      "node_modules/react/",
+      "node_modules/enzyme/"
+    ]
+  },
+  "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": "react-app"
   },

@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import { sortBy, get } from 'lodash';
-import { advisorsListSelector } from '../advisorsListSelector';
+import { statusAndLanguageFilterSelector } from '../statusAndLanguageFilterSelector';
 
 /**
  * Description of what data this get function is getting
@@ -9,16 +9,14 @@ import { advisorsListSelector } from '../advisorsListSelector';
  * @returns {*} the selected param
  */
 export const getFilteredAdvisorList = state => {
-  const advisorsList = advisorsListSelector(state);
+  const advisorsList = statusAndLanguageFilterSelector(state);
   const reviewFilter = get(state, 'selectedSorting', '');
-  const statusFilter = get(state, 'selectedStatus', '');
-  const languageFilter = get(state, 'selectedLangauge', '');
 
-  if(reviewFilter === 0) {
+  if (reviewFilter === 0) {
     return sortBy(advisorsList, ['reviews']).reverse();
   }
 
-  if(reviewFilter === 1) {
+  if (reviewFilter === 1) {
     return sortBy(advisorsList, ['reviews']);
   }
 
