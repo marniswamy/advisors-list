@@ -9,6 +9,6 @@
 export const sortByReducer = (state, payload) => {
   return {
     ...state,
-    sortBy: payload,
+    ...payload,
   };
 };

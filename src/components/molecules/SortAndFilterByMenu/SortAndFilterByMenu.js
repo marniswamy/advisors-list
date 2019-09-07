@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SortByContainer } from '../../../containers/atoms/SortByContainer';
-import { FilterByContainer } from '../../../containers/atoms/FilterByContainer';
+import { FilterByLanguageContainer } from '../../../containers/atoms/FilterByLanguageContainer';
+import { FilterByStatusContainer } from '../../../containers/atoms/FilterByStatusContainer';
 
 /**
  * SortAndFilterByMenu component holds the sort and filter componets for the
@@ -11,6 +12,7 @@ import { FilterByContainer } from '../../../containers/atoms/FilterByContainer';
 export const SortAndFilterByMenu = () => (
   <div className="sort-filter-menu">
     <SortByContainer />
-    <FilterByContainer />
+    <FilterByLanguageContainer />
+    <FilterByStatusContainer />
   </div>
 );

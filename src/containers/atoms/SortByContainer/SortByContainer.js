@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
-import { SortBy } from '../../../components/atoms/SortBy';
+import { Selector } from '../../../components/atoms/Selector';
 import { sortByAction } from '../../../actions/sortByAction';
 
 export const mapStateToProps = (state, ownProps) => ({
-  value: state.sortBy
+  value: state.selectedSorting
 });
 
 export const mapDispatchToProps = (dispatch, ownProps) => ({
   handleChange: (event) => {
     dispatch(
-      sortByAction(event.target.value)
+      sortByAction({
+        selectedSorting: event.target.value
+      })
     )
   }
 });
@@ -17,4 +19,18 @@ export const mapDispatchToProps = (dispatch, ownProps) => ({
 export const SortByContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(SortBy);
+)(Selector);
+
+SortByContainer.defaultProps = {
+  label: 'By Ratings',
+  options: [
+    {
+      label: 'High - Low',
+      value: 0
+    },
+    {
+      label: 'Low - High',
+      value: 1
+    }
+  ]
+}

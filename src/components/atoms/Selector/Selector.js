@@ -27,7 +27,9 @@ const useStyles = makeStyles(theme => ({
  * @param {*} props - a descriptions of what props is
  * @returns {*} a React Stateless Functional Component
  */
-export const FilterBy = ({
+export const Selector = ({
+  label,
+  options,
   value,
   handleChange
 }) => {
@@ -35,20 +37,41 @@ export const FilterBy = ({
   return (
     <div>
       <FormControl className={classes.formControl}>
-        <InputLabel>Filter Advisors</InputLabel>
+        <InputLabel>{label}</InputLabel>
         <Select
           value={value}
           onChange={handleChange}
           autoWidth
         >
-          <MenuItem value={1}>Status</MenuItem>
-          <MenuItem value={2}>Language</MenuItem>
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+          {
+            options.map(option =>
+              <MenuItem
+                key={option.value}
+                value={option.value}
+              >
+                {option.label}
+              </MenuItem>)
+          }
         </Select>
       </FormControl>
     </div>
   );
 }
 
-FilterBy.propTypes = {};
 
-FilterBy.defaultProps = {};
+Selector.propTypes = {
+  label: PropTypes.string,
+  option: PropTypes.array,
+  value: PropTypes.string,
+  handleChange: PropTypes.func
+};
+
+Selector.defaultProps = {
+  label: '',
+  options: [],
+  value: '',
+  handleChange: () => null
+};

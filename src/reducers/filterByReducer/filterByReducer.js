@@ -9,6 +9,6 @@
 export const filterByReducer = (state, payload) => {
   return {
     ...state,
-    filterBy: payload,
+    ...payload,
   };
 };

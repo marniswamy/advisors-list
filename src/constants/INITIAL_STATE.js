@@ -5,6 +5,7 @@ import { getFakeDataHelper } from "../helpers/getFakeDataHelper/getFakeDataHelpe
  */
 export const INITIAL_STATE = {
     advisorsList: getFakeDataHelper(),
-    filterBy: '',
-    sortBy: ''
+    selectedLangauge: '',
+    selectedStatus: '',
+    selectedSorting: ''
 }

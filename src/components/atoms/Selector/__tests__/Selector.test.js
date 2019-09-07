@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { FilterBy } from '../FilterBy';
+import { Selector } from '../Selector';
 import { mount } from 'enzyme';
 
-describe('FilterBy', () => {
+describe('Selector', () => {
   it('should render component', () => {
-    const MountedFilterBy = mount(
-      <FilterBy />,
+    const MountedSelector = mount(
+      <Selector />,
     );
-    const expected = MountedFilterBy.exists();
+    const expected = MountedSelector.exists();
     const result = true;
     expect(expected).toEqual(result);
   });
