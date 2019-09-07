@@ -7,11 +7,10 @@ import { sortBy, get } from 'lodash';
  * @param {{}} state - the redux state
  * @returns {*} the selected param
  */
-export const getAdvisorsList = state => get(
-  state,
-  'advisorsList',
-  [],
-);
+export const getAdvisorsList = state => {
+  const advisors = get(state, 'advisorsList', []);
+  return sortBy(advisors, ['name'])
+}
 
 /**
  * advisorsListSelector will provide the all advisors detials from the store
@@ -19,5 +18,5 @@ export const getAdvisorsList = state => get(
  */
 export const advisorsListSelector = createSelector(
   getAdvisorsList,
-  advisorsList => sortBy(advisorsList, ['name'])
+  advisorsList => advisorsList
 );
