@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { AdvisorsListPage } from '../AdvisorsListPage';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('AdvisorsListPage', () => {
   it('should render component', () => {
-    const MountedAdvisorsListPage = mount(
+    const MountedAdvisorsListPage = shallow(
       <AdvisorsListPage />,
     );
     const expected = MountedAdvisorsListPage.exists();

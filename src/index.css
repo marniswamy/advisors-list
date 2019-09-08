@@ -8,7 +8,24 @@ body {
   overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.sort-filter-menu {
+  min-height: 60px;
+  position: fixed;
+  width: 100%;
+  background: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.advisor-list-container {
+  margin-top: 56px;
+  padding-top: 72px;
+}
+
+.no-data-text {
+  display: flex;
+  align-items: center;
+  height: 20vh;
 }

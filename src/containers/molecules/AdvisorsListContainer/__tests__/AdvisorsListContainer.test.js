@@ -4,7 +4,7 @@ describe('AdvisorsListContainer', () => {
   it("should map the state to props", () => {
     const mockState = {};
     const expected = mapStateToProps(mockState);
-    const result = ["advisors"];
+    const result = ["advisors", "hasMore"];
     expect(Object.keys(expected)).toEqual(result);
   });
   it('should map dispatch to props', () => {

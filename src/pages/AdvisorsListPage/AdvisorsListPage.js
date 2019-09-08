@@ -1,4 +1,3 @@
-import './advisors-list-page.css';
 import * as React from 'react';
 import { Header } from '../../components/molecules/Header';
 import { SortAndFilterByMenu } from '../../components/molecules/SortAndFilterByMenu';

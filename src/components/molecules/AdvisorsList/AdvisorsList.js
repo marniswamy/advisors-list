@@ -16,7 +16,7 @@ export class AdvisorsList extends React.Component {
     itemsLength: 10,
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.getAdvisorsFromApi();
   }
 
