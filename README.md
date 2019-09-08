@@ -62,6 +62,3 @@ I have created the application with create react app, and below is the pattern f
 
 #### Mobile view
 ![sample](docs/Screenshot_2.png)
-
-#### Test cases snap
-![sample](docs/Screenshot_3.png)
