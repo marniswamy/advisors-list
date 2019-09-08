@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { SortAndFilterByMenu } from '../SortAndFilterByMenu';
-import { shallow } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('SortAndFilterByMenu', () => {
   it('should render component', () => {

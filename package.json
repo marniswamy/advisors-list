@@ -24,23 +24,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start:server": "nodemon server/index.js --exec babel-node --presets es2015 --watch server/*.js"
   },
   "proxy": "http://localhost:3001",
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>setup/setupEnzyme.js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/setup/"
-    ],
-    "unmockedModulePathPatterns": [
-      "node_modules/react/",
-      "node_modules/enzyme/"
-    ]
-  },
   "eslintConfig": {
     "extends": "react-app"
   },
