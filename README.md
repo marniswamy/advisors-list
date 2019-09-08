@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Advisors List (React, Redux)
 
-## Available Scripts
+### Setup
+Below are the steps to get it running.
 
-In the project directory, you can run:
+1. `yarn`  Installs all the dependencies.
+2. `yarn start:server`  Starts the application server.
+3. `yarn start`  Starts the application.
+4. `yarn test`  Run all the tests using the test command (optional step)
 
-### `npm start`
+Once the server is up the site will be available at `http://localhost:3000/`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Description
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Design and implement React application to list all advisors and sort them based on different criteria such as whether or not an advisor is online or offline, or which languages an advisor speaks. It should also be possible to sort the list of advisors by the number of reviews he/she received.
 
-### `npm test`
+## Requirements
+- [x] Sort advisors by number of reviews
+- [x] Filter advisors by status and language.
+- [x]Basic testing
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] Nice look and feel.
+- [x] Use a node.js server to serve data to the client.
+- [x] Use Promise and setTimeout to simulate a delay in returning response through a network.
+- [x] Unlimited scrolling of advisors when user scrolls to the bottom of the page.
 
-### `npm run build`
+#### Approach
+I have created the application with create react app, and below is the pattern followed in the implementation
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### Components
+- The complete app is divided in to multiple reusable components/views to maintain the code's reusability, followed the atomic design to organise components.
+- I have used material UI as a base and created wrappers around the components for customisation based on the mock up.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+##### Containers
+- Components are wrapped with containers to get the Redux state and actions as props.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### Actions
+- Actions are plain javascript objects with TYPE property in it, actions will be dispatched based on user interactions with the application.
 
-### `npm run eject`
+##### Reducers
+- Reducers are pure functions which will take action object as input parameters and will update the Redux state accordingly.
+- I created the individual reducers for each action to follow a TDD approach and to make it more maintainable and readable.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##### Selectors
+- Selectors are used to compute derived data, allowing the application to avoid unnecessary computation or re-rendering.
+- Selectors are efficient. A selector is not recomputed unless one of its input arguments changes.
+- Selectors can be composed and they can be used in other selectors to provide params which helps increase the maintainability.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### Constants
+- Constants are used to define the ACTION CONSTANTS AND other static data in the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+##### Server
+- Used Node and express server to serve the data to the client from the faker API
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+##### Testing
+- Used jest and Enzyme libraries to test components, containers, actions, reducers and selectors
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Sample screens
+#### Desktop view
+![sample](docs/Screenshot_1.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Mobile view
+![sample](docs/Screenshot_2.png)
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Test cases snap
+![sample](docs/Screenshot_3.png)
