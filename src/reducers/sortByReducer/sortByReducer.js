@@ -1,10 +1,9 @@
 /**
- * A small description explaining where this function is used and why
+ * sortByReducer used to merge the selected sort value merge to redux store
  *
- * @param {{}} state - the Redux state of the reducer that this function is
- *  used for
- * @param {*} payload - the payload of the action this reducer is attached to
- * @returns {*} the next Redux state
+ * @param {{}} state - the Redux state of the reducer
+ * @param {*} payload - selected sort key value object as param
+ * @returns {*} the updated store
  */
 export const sortByReducer = (state, payload) => {
   return {

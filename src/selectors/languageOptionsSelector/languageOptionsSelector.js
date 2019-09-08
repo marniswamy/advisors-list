@@ -2,10 +2,11 @@ import { createSelector } from 'reselect';
 import { get } from 'lodash';
 
 /**
- * Description of what data this get function is getting
+ * getLanguageOptions method gives the options for the language filter from the
+ * advisors list from the store
  *
- * @param {{}} state - the redux state
- * @returns {*} the selected param
+ * @param {{}} state - the redux state as a param
+ * @returns {*} the options for the language filter
  */
 export const getLanguageOptions = state => {
   const advisorsList = get(state, 'advisorsList', []);
@@ -18,7 +19,8 @@ export const getLanguageOptions = state => {
 }
 
 /**
- * A description explaining what data we are getting and where we are using it.
+ * languageOptionsSelector gives the options for the language filter from the
+ * advisors list from the store
  */
 export const languageOptionsSelector = createSelector(
   getLanguageOptions,

@@ -2,15 +2,15 @@ import { createSelector } from 'reselect';
 import { get } from 'lodash';
 
 /**
- * Description of what data this get function is getting
+ * getStatusFilter method returns the selectedStatus value from the store
  *
- * @param {{}} state - the redux state
- * @returns {*} the selected param
+ * @param {{}} state - the redux state as a param
+ * @returns {*} the selectedStatus filter value
  */
 export const getStatusFilter = state => get(state, 'selectedStatus', '');
 
 /**
- * A description explaining what data we are getting and where we are using it.
+ * statusFilterSelector gives the selected value of the status dropdoen filter
  */
 export const statusFilterSelector = createSelector(
   getStatusFilter,

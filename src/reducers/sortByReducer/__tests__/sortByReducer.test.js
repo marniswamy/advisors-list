@@ -1,18 +1,23 @@
-import Immutable from 'seamless-immutable';
 import { sortByReducer } from '../sortByReducer';
 
 describe('sortByReducer', () => {
   it('should update the state and return the new state', () => {
-    const mockState = Immutable({
-      mockParam: {},
-    });
-    const mockPayload = 'mockPayload';
+    const mockState = {
+      advisorsList: [],
+      selectedLangauge: '',
+      selectedStatus: '',
+      selectedSorting: ''
+    };
+    const mockPayload = {
+      selectedSorting: 0
+    };
     const expected = sortByReducer(mockState, mockPayload);
-    const result = Immutable({
-      mockParam: {
-        mockData: 'mockPayload',
-      },
-    });
+    const result = {
+      advisorsList: [],
+      selectedLangauge: '',
+      selectedStatus: '',
+      selectedSorting: 0
+    };
     expect(expected).toEqual(result);
   });
 });

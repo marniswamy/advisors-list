@@ -3,7 +3,7 @@ import { languageFilterSelector } from '../languageFilterSelector';
 describe('languageFilterSelector', () => {
   it('should select data from the store state', () => {
     const mockState = {
-      selectedLangauge; 'en'
+      selectedLangauge: 'en'
     };
     const expected = languageFilterSelector(mockState);
     const result = 'en';

@@ -41,13 +41,13 @@ export class AdvisorsList extends React.PureComponent {
 
 
   render() {
-    const { advisors } = this.props;
+    const { advisors, hasMore } = this.props;
     return (
       <Container maxWidth="sm" className="advisor-list-container">
         <InfiniteScroll
           dataLength={advisors.length}
           next={this.fetchMoreAdvisorsList}
-          hasMore={advisors.length !== 60}
+          hasMore={hasMore}
           loader={<h4 className='text-center'>Loading...</h4>}
           endMessage={<h4 className='text-center'>No More Results</h4>}
           className='infinite-scroll'

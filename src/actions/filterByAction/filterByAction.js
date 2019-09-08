@@ -1,7 +1,8 @@
 import { ADVISOR_LIST_ACTIONS } from "../../constants/ADVISOR_LIST_ACTIONS";
 
 /**
- * A small description explaining where this function is used and why
+ * filterByAction will get dispatched when user changes 
+ * the language or status filter
  */
 export const filterByAction = payload => ({
     type: ADVISOR_LIST_ACTIONS.FILTER_BY,

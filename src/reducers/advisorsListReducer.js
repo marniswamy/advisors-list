@@ -4,7 +4,7 @@ import { filterByReducer } from '../reducers/filterByReducer';
 import { sortByReducer } from '../reducers/sortByReducer';
 import { fetchAdvisorsListReducer } from '../reducers/fetchAdvisorsListReducer';
 
-
+// Mapping actions with corresponding reducers
 const reducers = {
   [ADVISOR_LIST_ACTIONS.FILTER_BY]: filterByReducer,
   [ADVISOR_LIST_ACTIONS.SORT_BY]: sortByReducer,

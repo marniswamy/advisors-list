@@ -1,12 +1,11 @@
 import get from 'lodash/get';
 
 /**
- * A small description explaining where this function is used and why
+ * fetchAdvisorsListReducer used to merge the advisors list to the store
  *
- * @param {{}} state - the Redux state of the reducer that this function is
- *  used for
- * @param {*} payload - the payload of the action this reducer is attached to
- * @returns {*} the next Redux state
+ * @param {{}} state - the Redux state of the reducer
+ * @param {*} payload - all advisors from th network call
+ * @returns {*} the updated store with advisors list
  */
 export const fetchAdvisorsListReducer = (state, payload) => ({
   ...state,

@@ -1,6 +1,6 @@
-import { languageOptionsSelector } from '../languageOptionsSelector';
+import { maxAllowedAdvisorsSelector } from '../maxAllowedAdvisorsSelector';
 
-describe('languageOptionsSelector', () => {
+describe('maxAllowedAdvisorsSelector', () => {
   it('should select data from the store state', () => {
     const mockState = {
       advisorsList: [
@@ -42,12 +42,8 @@ describe('languageOptionsSelector', () => {
         },
       ],
     };
-    const expected = languageOptionsSelector(mockState);
-    const result = [
-      { "label": "ge", "value": "ge" },
-      { "label": "ru", "value": "ru" },
-      { "label": "en_AU", "value": "en_AU" }
-    ];
+    const expected = maxAllowedAdvisorsSelector(mockState);
+    const result = true;
     expect(expected).toEqual(result);
   });
   it('should provide a default value if there is no value in the store', () => {
@@ -56,8 +52,8 @@ describe('languageOptionsSelector', () => {
         mockData: 'mockString',
       },
     };
-    const expected = languageOptionsSelector(mockState);
-    const result = [];
+    const expected = maxAllowedAdvisorsSelector(mockState);
+    const result = true;
     expect(expected).toEqual(result);
   });
 });
