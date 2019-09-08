@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 import filter from 'lodash/filter';
+import isEmpty from 'lodash/isEmpty';
 import { advisorsListSelector } from '../advisorsListSelector';
 import { statusFilterSelector } from '../statusFilterSelector';
 import { languageFilterSelector } from '../languageFilterSelector';
@@ -20,13 +21,13 @@ export const statusAndLanguageFilterSelector = createSelector(
     status,
     language,
   ) => {
-    if (status === "" && language !== "") {
+    if (isEmpty(status) && !isEmpty(language)) {
       return filter(advisorList, { 'language': language })
     }
-    if (status !== "" && language === "") {
+    if (!isEmpty(status) && isEmpty(language)) {
       return filter(advisorList, { 'status': status })
     }
-    if (status !== "" && language !== "") {
+    if (!isEmpty(status) && !isEmpty(language)) {
       return filter(advisorList, { 'language': language, 'status': status })
     }
     return advisorList

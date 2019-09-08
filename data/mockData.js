@@ -11,9 +11,9 @@ const getText = (value) => {
  * getFakeDataHelper used to generate the fake data of the list
  * of advisors
  */
-export const getFakeDataHelper = () => {
+export const getFakeDataHelper = (length) => {
     let list = [];
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < length; i++) {
         list.push({
             name: faker.name.findName(),
             jobTitle: faker.name.jobTitle(),
