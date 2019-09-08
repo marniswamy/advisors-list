@@ -12,7 +12,7 @@ Once the server is up the site will be available at `http://localhost:3000/`
 
 # Description
 
-Design and implement React application to list all advisors and sort them based on different criteria such as whether or not an advisor is online or offline, or which languages an advisor speaks. It should also be possible to sort the list of advisors by the number of reviews he/she received.
+Design and implement React application to list all advisors and sort them based on different criteria such as whether or not an advisor is Active or Inactive, or which languages an advisor speaks. It should also be possible to sort the list of advisors by the number of reviews he/she received.
 
 ## Requirements
 - [x] Sort advisors by number of reviews
