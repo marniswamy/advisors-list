@@ -22,9 +22,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 /**
- * A description explaining what we use this component for
+ * Selector component is for filter dropdown used for language and status filter
  *
- * @param {*} props - a descriptions of what props is
+ * @param {*} props - required props as a param
  * @returns {*} a React Stateless Functional Component
  */
 export const Selector = ({

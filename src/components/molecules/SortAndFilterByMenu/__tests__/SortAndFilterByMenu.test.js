@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { SortAndFilterByMenu } from '../SortAndFilterByMenu';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('SortAndFilterByMenu', () => {
   it('should render component', () => {
-    const MountedSortAndFilterByMenu = mount(
+    const MountedSortAndFilterByMenu = shallow(
       <SortAndFilterByMenu />,
     );
     const expected = MountedSortAndFilterByMenu.exists();

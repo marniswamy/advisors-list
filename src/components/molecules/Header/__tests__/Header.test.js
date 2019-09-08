@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Header } from '../Header';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Header', () => {
   it('should render component', () => {
-    const MountedHeader = mount(
+    const MountedHeader = shallow(
       <Header />,
     );
     const expected = MountedHeader.exists();

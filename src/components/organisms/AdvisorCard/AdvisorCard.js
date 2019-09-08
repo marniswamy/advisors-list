@@ -25,12 +25,14 @@ const useStyles = makeStyles(theme => ({
 }));
 
 /**
- * A description explaining what we use this component for
+ * AdvisorCard component holds the advisor details card
  *
- * @param {*} props - a descriptions of what props is
+ * @param {*} props - each advisor as a param for each card
  * @returns {*} a React Stateless Functional Component
  */
-export const AdvisorCard = ({ advisor }) => {
+export const AdvisorCard = ({
+  advisor
+}) => {
   const classes = useStyles();
 
   return (

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Selector } from '../Selector';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Selector', () => {
   it('should render component', () => {
-    const MountedSelector = mount(
+    const MountedSelector = shallow(
       <Selector />,
     );
     const expected = MountedSelector.exists();

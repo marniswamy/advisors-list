@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { AdvisorCard } from '../AdvisorCard';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('AdvisorCard', () => {
   it('should render component', () => {
-    const MountedAdvisorCard = mount(
+    const MountedAdvisorCard = shallow(
       <AdvisorCard />,
     );
     const expected = MountedAdvisorCard.exists();

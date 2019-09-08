@@ -11,7 +11,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
  *
  * @returns {*} a React Stateless Functional Component
  */
-export class AdvisorsList extends React.PureComponent {
+export class AdvisorsList extends React.Component {
   state = {
     itemsLength: 10,
   }
