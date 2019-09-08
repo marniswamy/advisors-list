@@ -17,7 +17,7 @@ Design and implement React application to list all advisors and sort them based 
 ## Requirements
 - [x] Sort advisors by number of reviews
 - [x] Filter advisors by status and language.
-- [x]Basic testing
+- [x] Basic testing
 
 - [x] Nice look and feel.
 - [x] Use a node.js server to serve data to the client.
