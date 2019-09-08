@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { AdvisorsList } from '../../../components/molecules/AdvisorsList';
-import { filteredAdvisorListSelector } from '../../../selectors/filteredAdvisorListSelector';
+import { sortedAdvisorsListSelector } from '../../../selectors/sortedAdvisorsListSelector';
 
 export const mapStateToProps = state => ({
-  advisors: filteredAdvisorListSelector(state)
+  advisors: sortedAdvisorsListSelector(state)
 });
 
 export const AdvisorsListContainer = connect(

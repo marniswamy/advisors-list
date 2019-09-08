@@ -2,14 +2,16 @@ import { createSelector } from 'reselect';
 import { get } from 'lodash';
 
 /**
- * Description of what data this get function is getting
+ * getLanguageFilter method gives the selected language filter from store
  *
- * @param {{}} state - the redux state
- * @returns {*} the selected param
+ * @param {{}} state - the redux state as a parameter
+ * @returns {*} the selected selectedLangauge
  */
 export const getLanguageFilter = state => get(state, 'selectedLangauge', '');
+
+
 /**
- * A description explaining what data we are getting and where we are using it.
+ * languageFilterSelector selector gives the selected filter value from store
  */
 export const languageFilterSelector = createSelector(
   getLanguageFilter,

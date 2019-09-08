@@ -6,7 +6,8 @@ import { languageFilterSelector } from '../languageFilterSelector';
 
 
 /**
- * A description explaining what data we are getting and where we are using it.
+ * statusAndLanguageFilterSelector will give the filtered data based on the selectd filters
+ * TODO: refactor this below logic
  */
 export const statusAndLanguageFilterSelector = createSelector(
   [

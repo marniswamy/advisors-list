@@ -2,13 +2,15 @@ import { createSelector } from 'reselect';
 import { sortBy, get } from 'lodash';
 import { statusAndLanguageFilterSelector } from '../statusAndLanguageFilterSelector';
 
+
 /**
- * Description of what data this get function is getting
+ * getSortedAdvisorsList will give the list after appling sorting filter
+ * on top of the filtered list
  *
- * @param {{}} state - the redux state
- * @returns {*} the selected param
+ * @param {{}} state - the redux state as a param
+ * @returns {*} the filtered and sorted advisors list
  */
-export const getFilteredAdvisorList = state => {
+export const getSortedAdvisorsList = state => {
   const advisorsList = statusAndLanguageFilterSelector(state);
   const reviewFilter = get(state, 'selectedSorting', '');
 
@@ -21,12 +23,13 @@ export const getFilteredAdvisorList = state => {
   }
 
   return advisorsList;
-};
+}
 
 /**
- * A description explaining what data we are getting and where we are using it.
+ * sortedAdvisorsListSelector will give the list after appling sorting filter
+ * on top of the filtered list
  */
-export const filteredAdvisorListSelector = createSelector(
-  getFilteredAdvisorList,
-  filteredAdvisorList => filteredAdvisorList,
+export const sortedAdvisorsListSelector = createSelector(
+  getSortedAdvisorsList,
+  sortedAdvisorsList => sortedAdvisorsList,
 );

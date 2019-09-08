@@ -1,16 +1,16 @@
 import { mapStateToProps, mapDispatchToProps } from '../FilterByStatusContainer';
 
 describe('FilterByStatusContainer', () => {
-  it('should map the state to props', () => {
+  it("should map the state to props", () => {
     const mockState = {};
     const expected = mapStateToProps(mockState);
-    const result = {};
-    expect(expected).toEqual(result);
+    const result = ["value"];
+    expect(Object.keys(expected)).toEqual(result);
   });
   it('should map dispatch to props', () => {
     const mockDispatch = jest.fn();
     const expected = mapDispatchToProps(mockDispatch);
-    const result = {};
-    expect(expected).toEqual(result);
+    const result = ['handleChange'];
+    expect(Object.keys(expected)).toEqual(result);
   });
 });

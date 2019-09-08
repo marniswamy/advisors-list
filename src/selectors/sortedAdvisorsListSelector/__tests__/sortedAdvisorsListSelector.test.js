@@ -1,13 +1,13 @@
-import { filteredAdvisorListSelector } from '../filteredAdvisorListSelector';
+import { sortedAdvisorsListSelector } from '../sortedAdvisorsListSelector';
 
-describe('filteredAdvisorListSelector', () => {
+describe('sortedAdvisorsListSelector', () => {
   it('should select data from the store state', () => {
     const mockState = {
       mockParam: {
         mockData: 'mockString',
       },
     };
-    const expected = filteredAdvisorListSelector(mockState);
+    const expected = sortedAdvisorsListSelector(mockState);
     const result = 'mockString';
     expect(expected).toEqual(result);
   });
@@ -17,7 +17,7 @@ describe('filteredAdvisorListSelector', () => {
         mockData: 'mockString',
       },
     };
-    const expected = filteredAdvisorListSelector(mockState);
+    const expected = sortedAdvisorsListSelector(mockState);
     const result = '';
     expect(expected).toEqual(result);
   });
